@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{{ params['favicon']}}">
+    <title>{{ params['title']}}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/add_student.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">Photo Time...(Please Smile 😊)</h3>
+            </div>
+        </header>
+
+        <main role="main" class="inner cover">
+            <div class="row">
+                <div class="col-sm text-center d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('vidfeed_captureimg', username=username) }}" width="95%" alt="sorry">
+                </div>
+                <div class="col-sm text-center d-flex align-items-center justify-content-center">
+                    <a href="{{url_for('train_classifier')}}"><button class="btn btn-lg btn-primary btn-block">Train Model</button></a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="mastfoot mt-auto">
+        </footer>
+    </div>
+</body>
+
+</html>

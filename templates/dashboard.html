@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Admin Panel</h1>
+        <p class="lead">Manage Your Data</p>
+    </div>
+
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Add Student</h4>
+                </div>
+                <div class="card-body">
+                    <img class="card-title pricing-card-title" width="100px" src="{{url_for('static', filename='assets/image/add_student.png')}}">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>From here you can add new student</li>
+                    </ul>
+                    <a href="/dashboard/add-student"><button type="button" class="btn btn-lg btn-block btn-primary">ADD</button></a>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Manage Student</h4>
+                </div>
+                <div class="card-body">
+                    <img class="card-title pricing-card-title" width="100px" src="{{url_for('static', filename='assets/image/manage_student.png')}}">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>From here you can manage students</li>
+                    </ul>
+                    <a href="/dashboard/add-student"><button type="button" class="btn btn-lg btn-block btn-primary">Manage</button></a>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Take Attendance</h4>
+                </div>
+                <div class="card-body">
+                    <img class="card-title pricing-card-title" width="100px" src="{{url_for('static', filename='assets/image/take_attendance.png')}}">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>From here you can take attendance</li>
+                    </ul>
+                    <a href="/take_attendance/5"><button type="button" class="btn btn-lg btn-block btn-primary">Take</button></a>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">View Attendance</h4>
+                </div>
+                <div class="card-body">
+                    <img class="card-title pricing-card-title" width="100px" src="{{url_for('static', filename='assets/image/view_attendance.png')}}">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>From here you can view attendance</li>
+                    </ul>
+                    <a href="/dashboard/add-student"><button type="button" class="btn btn-lg btn-block btn-primary">View</button></a>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+{% endblock %}

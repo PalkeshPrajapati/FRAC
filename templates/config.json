@@ -1,0 +1,20 @@
+{
+    "params": {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/attendifyme",
+        "prod_uri": "mysql://root:@localhost/attendifyme",
+        "fb_uri": "https://www.facebook.com/",
+        "twitter_uri": "https://twitter.com/?lang=en",
+        "github_uri": "https://github.com/",
+        "website_name": "AttendifyMe",
+        "title": "AttendifyMe",
+        "tag_line": "Where presence becomes progress",
+        "favicon": "static/assets/favicon.ico",
+        "logo": "static/assets/logo.png",
+
+        "about_txt": "Hi my name is Palkesh Prajapati. I am 18 year old. This is my first blog website and also first backend website",
+        "admin_user": "palkesh",
+        "admin_password": "123456",
+        "upload_location": "F:\\EVERYTHING\\Work Folder\\Palkesh\\Diploma\\6th_Sem_Diploma\\Mazer Project\\Flask_learn_Project\\uploades"
+    }
+}

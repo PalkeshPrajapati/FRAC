@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ params['title']}}</title>
+    <link rel="icon" type="image/x-icon" href="{{ params['favicon'] }}" />
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <img src="{{ params['logo']}}" width="45px" class="mx-3" alt="logo">
+        <h4 class="my-0 mr-md-auto" href="/">{{ params['website_name'] }}</h4>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="/">Home</a>
+            {% if admin_session %}
+                <a class="p-2 text-dark" href="/about">About</a>
+                <a class="p-2 text-dark" href="/dashboard">Admin Home</a>
+                <a class="btn btn-outline-danger ml-2" href="/dashboard/logout?user=admin">Logout</a>
+                {% else %}
+                <a class="p-2 text-dark" href="/about">About</a>
+                <a class="btn btn-outline-primary ml-2" href="/dashboard">Admin Login</a>
+                <a class="btn btn-outline-primary ml-2" href="/student-dashboard">Student Login</a>
+            {% endif %}
+        </nav>
+    </div>
+
+
+    {% block body %}
+    {% endblock %}
+
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+            <div class="col-12 col-md d-flex justify-content-center">
+                <small class="d-block mb-3 text-muted">&copy; 2023-2024</small>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</html>
